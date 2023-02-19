@@ -3,18 +3,18 @@
         "Amount": "10",
         "Unit": "USD"
     },
-    "BudgetName": "CP Bootcamp Budget",
+    "BudgetName": "Credits Budget",
     "BudgetType": "COST",
     "CostTypes": {
-        "IncludeCredit": false,
+        "IncludeCredit": true,
         "IncludeDiscount": true,
-        "IncludeOtherSubscription": true,
-        "IncludeRecurring": true,
+        "IncludeOtherSubscription": false,
+        "IncludeRecurring": false,
         "IncludeRefund": true,
-        "IncludeSubscription": true,
-        "IncludeSupport": true,
+        "IncludeSubscription": false,
+        "IncludeSupport": false,
         "IncludeTax": true,
-        "IncludeUpfront": true,
+        "IncludeUpfront": false,
         "UseBlended": false
     },
     "TimePeriod": {
