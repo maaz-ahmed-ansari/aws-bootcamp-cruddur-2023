@@ -22,7 +22,7 @@ Created two budgets, one including Credits (viz. CP Bootcamp Budget) and one inc
 
 ### Recreate Logical Architecture Diagram
 
-![Crudder](assets/Week-0_Crudder_Logical_Diagram.png) 
+![Crudder](assets/Week-0_Logical_Diagram.jpeg) 
 
 [Lucid Chart Shared Link](https://lucid.app/lucidchart/7077d91e-09d6-48af-b873-85d2315e7099/edit?viewport_loc=-437%2C-1150%2C2624%2C1152%2C0_0&invitationId=inv_b540e295-08f7-4a76-bbf4-8172dade75ea)
 
