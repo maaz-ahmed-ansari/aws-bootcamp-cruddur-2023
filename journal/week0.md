@@ -2,7 +2,7 @@
 
 ## Required Homework/Tasks
 
-### Installed and used AWS CLI in Gitpod
+### Install and use AWS CLI in Gitpod
 
 Integrated in [.gitpod.yml](https://github.com/maaz-ahmed-ansari/aws-bootcamp-cruddur-2023/blob/main/.gitpod.yml) so that it will be executes at start of Gitpod workspace.
 
@@ -19,5 +19,11 @@ Created Billing Alarm and integrated it with SNS
 Created two budgets, one including Credits (viz. CP Bootcamp Budget) and one including Credits (viz. Credits Budget) for $10 each
 
 ![AWS Budgets](assets/Week-0_Budgets.jpg "CP Bootcamp Budget and Credits Budget")
+
+### Recreate Logical Architecture Diagram
+
+![Crudder](assets/Week-0_Crudder_Logical_Diagram.png) 
+
+[Lucid Chart Shared Link](https://lucid.app/lucidchart/7077d91e-09d6-48af-b873-85d2315e7099/edit?viewport_loc=-437%2C-1150%2C2624%2C1152%2C0_0&invitationId=inv_b540e295-08f7-4a76-bbf4-8172dade75ea)
 
 ## Homework Challanges
