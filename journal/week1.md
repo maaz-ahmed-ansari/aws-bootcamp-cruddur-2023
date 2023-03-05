@@ -51,3 +51,19 @@
 - Response on Port 3000
 
 ![Notification Endpoint UI](assets/notifications_endpoint_frontend_response.jpg)
+
+### Run DynamoDB Local Container
+
+- Create DynamoDB Table
+
+![Create DynamoDB Table](assets/Create_a_DynamoDB_table.jpg)
+
+- Get Records
+
+![Get Records](assets/DynamoDB_get_records.jpg)
+
+### Postgres Container
+
+- Postgres Client
+
+![Postgres Client](assets/postgres_client.jpg)
