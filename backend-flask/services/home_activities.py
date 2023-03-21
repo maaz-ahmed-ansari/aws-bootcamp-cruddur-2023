@@ -4,7 +4,9 @@ from opentelemetry import trace
 tracer = trace.get_tracer("home.activities")
 
 class HomeActivities:
-  def run(Logger):
+  def run():
+  #X Ray subsegment
+  #def run(Logger):
     #Logger.info("HomeActivities")
     with tracer.start_as_current_span("home-activities-mock-data"):
       span = trace.get_current_span()
