@@ -39,3 +39,18 @@
 ![MAX](assets/Week-2_Query_Max_app.result_lengthexists.jpg)
 
 ![HEATMAP](assets/Week-2_Query_Heatmap.jpg)
+
+## Instrument AWS X-Ray
+
+- Instrument AWS X-Ray
+
+![Instrument AWS X-Ray](assets/Week-2_Instrument_X-Ray.jpg)
+
+- X-Ray Group, Sampling rule and Traces
+
+![X-Ray Group](assets/Week-2_X-Ray_Group.jpg)
+
+![Sampling rule](assets/Week-2_X-Ray_Sampling rules.jpg)
+
+![Trace](assets/Week-2_X-Ray_Trace_1jpg.jpg)
+
