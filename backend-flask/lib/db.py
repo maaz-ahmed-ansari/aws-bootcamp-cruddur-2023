@@ -25,7 +25,7 @@ class Db:
     print("SQL STATEMENT - [array]------------")
     print(sql)
     wrapped_sql = self.query_wrap_array(sql)
-    with selfpool.connection() as conn:
+    with self.pool.connection() as conn:
       with conn.cursor() as cur:
         cur.execute(wrapped_sql)
         json = cur.fetchone()
