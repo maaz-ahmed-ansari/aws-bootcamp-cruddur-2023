@@ -1,35 +1,35 @@
 from psycopg_pool import ConnectionPool
 import os
-
+import re
+import sys
 
 class Db:
   def __init__(self):
     self.init_pool()
   
+  def template(name)
+
   def init_pool(self):
     connection_url = os.getenv("CONNECTION_URL")
     self.pool = ConnectionPool(connection_url)
-
-  def query_commit_id(self, sql, *kwargs):
+  # we want to commit data such as an insert
+  # ensure to check for RETURNING in all uppercase
+  def query_commit(self, sql, params):
     print("SQL STATEMENT - [commit with returning]------------")
-    try:
-      conn = self.pool.connection()
-      cur = conn.cursor()
-      cur.execute(sql, kwargs)
-      returning_id = cur.fetchone()[0]
-      conn.commit()
-      return returning_id
-    except Exception as err:
-      self.print_sql_err(err)
-      # conn.rollback()
+    print(sql + "\n")
 
-  def query_commit(self, sql):
-    print("SQL STATEMENT - [commit]------------")
+    pattern = r"\bRETURNING\b"
+    is_returning_id=re.search(pattern, my_string, sql)
+
     try:
       conn = self.pool.connection()
       cur = conn.cursor()
-      cur.execute(sql)
+      cur.execute(sql, params)
+      if is_returning_id:
+        returning_id = cur.fetchone()[0]
       conn.commit()
+      if is_returning_id:
+        return returning_id
     except Exception as err:
       self.print_sql_err(err)
       # conn.rollback()
@@ -37,7 +37,7 @@ class Db:
   # when we want to return an array pf json object
   def query_array_json(self, sql):
     print("SQL STATEMENT - [array]------------")
-    print(sql)
+    print(sql + "\n")
     wrapped_sql = self.query_wrap_array(sql)
     with self.pool.connection() as conn:
       with conn.cursor() as cur:
@@ -84,7 +84,7 @@ class Db:
     print ("psycopg2 traceback:", traceback, "-- type:", err_type)
 
     # psycopg2 extensions.Diagnostics object attribute
-    print ("\nextensions.Diagnostics:", err.diag)
+    # print ("\nextensions.Diagnostics:", err.diag)
 
     # print the pgcode and pgerror exceptions
     print ("pgerror:", err.pgerror)
