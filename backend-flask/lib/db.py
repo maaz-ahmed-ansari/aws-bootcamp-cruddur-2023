@@ -19,12 +19,17 @@ class Db:
     self.pool = ConnectionPool(connection_url)
   # we want to commit data such as an insert
   # ensure to check for RETURNING in all uppercase
-  def query_commit(self, sql, params):
-    print("SQL STATEMENT - [commit with returning]------------")
+  def print_sql(self, title, sql):
+    cyan = '\033[96m'
+    no_color = '\033[0m'
+    print()
+    print(f"{cyan}SQL STATEMENT - [{title}]------------{no_color}")
     print(sql + "\n")
 
+  def query_commit(self, sql, params):
+    self.print_sql('commit with returning', sql)
     pattern = r"\bRETURNING\b"
-    is_returning_id=re.search(pattern, my_string, sql)
+    is_returning_id=re.search(pattern, sql)
 
     try:
       with self.pool.connection() as conn:
